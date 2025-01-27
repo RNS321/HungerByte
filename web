@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HungerByte - HNGER</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #ff6f61;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .counter {
+      font-size: 3em;
+      font-weight: bold;
+      color: #2ecc71;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #27ae60;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to HungerByte (HNGER)</h1>
+  <p>
+    HungerByte is the meme coin with a mission! Leveraging cutting-edge blockchain technology and AI-driven food distribution systems, HungerByte aims to revolutionize how we tackle world hunger. Every transaction helps fund sustainable food solutions, reduce waste, and connect surplus food to those in need.
+  </p>
+  <div class="counter" id="mealCounter">0</div>
+  <p>Meals funded so far!</p>
+  <button onclick="donate()">Donate Now</button>
+  <footer>
+    &copy; 2023 HungerByte. Let’s turn "HODL" into "Help Others Daily & Lovingly!" 🌍🍴
+  </footer>
+
+  <script>
+    let mealsFunded = 0;
+
+    function donate() {
+      // Simulate a donation by adding a random number of meals
+      const meals = Math.floor(Math.random() * 10) + 1;
+      mealsFunded += meals;
+      document.getElementById('mealCounter').textContent = mealsFunded;
+      alert(`Thank you for your donation! You helped fund ${meals} meals. 🎉`);
+    }
+  </script>
+</body>
+</html>
